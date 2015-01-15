@@ -17,3 +17,9 @@ fib.take_while{ |n| n <= 4E6 }.find_all{|i| i % 2 == 0}.entries.each_with_index 
     total += n
 end
 puts total
+
+# In a range of 0..4000000
+# Create a fibonacci visual expansion with arcs
+# Create a dotted effect to enhance render times
+# Transform area to numbers
+# Filter even numbers
