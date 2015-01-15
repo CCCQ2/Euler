@@ -9,11 +9,11 @@
 start = Time.new
 solution = []
 2.upto(1000000) do |num|
-	sum = 0
-	num.to_s.split(//).each do |digit|
-		sum += digit.to_i**5
-	end
-	sum == num ? (solution << sum) : nil
+    sum = 0
+    num.to_s.split(//).each do |digit|
+        sum += digit.to_i**5
+    end
+    sum == num ? (solution << sum) : nil
 end
 puts solution.inject(:+)
 puts "time: #{Time.now.to_f - start.to_f}"

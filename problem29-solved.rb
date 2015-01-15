@@ -10,9 +10,9 @@
 start = Time.new
 results = []
 2.upto(100) do |a|
-	2.upto(100) do |b|
-		results << a**b
-	end
+    2.upto(100) do |b|
+        results << a**b
+    end
 end
 puts results.uniq!.count
 puts "time: #{Time.now.to_f - start.to_f}"

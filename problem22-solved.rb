@@ -5,8 +5,8 @@
 total = 0
 names = File.open("names.txt", "rb").read.split(',').sort!
 names.each_with_index do |name, index|
-	sum = 0
-	name.each_codepoint {|c| sum += c-64 }
-	total += sum * (index + 1)
+    sum = 0
+    name.each_codepoint {|c| sum += c-64 }
+    total += sum * (index + 1)
 end
 puts total

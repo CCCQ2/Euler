@@ -19,15 +19,15 @@
 require 'matrix'
 FIB_MATRIX = Matrix[[1,1],[1,0]]
 def fib(n)
-	(FIB_MATRIX**(n-1))[0,0]
+    (FIB_MATRIX**(n-1))[0,0]
 end
 
 num = 1
 loop do
-	if fib(num).to_s.size >= 1000
-		puts "N: #{num} - fib: #{fib(num)}"
-		break
-	else
-		num += 1
-	end
+    if fib(num).to_s.size >= 1000
+        puts "N: #{num} - fib: #{fib(num)}"
+        break
+    else
+        num += 1
+    end
 end

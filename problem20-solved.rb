@@ -3,9 +3,9 @@
 #and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
 #Find the sum of the digits in the number 100!
 class Integer
-	def fact
-		(1..self).reduce(:*)
-	end
+    def fact
+        (1..self).reduce(:*)
+    end
 end
 
 puts "FACT 100 = #{100.fact}"

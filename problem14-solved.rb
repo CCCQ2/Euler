@@ -1,3 +1,4 @@
+# PROBLEM
 #The following iterative sequence is defined for the set of positive integers:
 #n  n/2 (n is even)
 #n  3n + 1 (n is odd)
@@ -7,19 +8,27 @@
 #Which starting number, under one million, produces the longest chain?
 #NOTE: Once the chain starts the terms are allowed to go above one million.
 
+# START TIMER
+start = Time.new
+
+# FUNCTIONS
 def reduction(n)
-	list = []
-	until n == 1 do
-		list << n
-		n = (n.even? ? (n / 2) : (3 * n + 1))
-	end
-	list << 1
-	return list
+    list = []
+    until n == 1 do
+        list << n
+        n = (n.even? ? (n / 2) : (3 * n + 1))
+    end
+    list << 1
+    return list
 end
 
+# CODE
 max = []
 for x in 1..1E6
-	sequence = reduction(x)
-	max = sequence if sequence.size > max.size
+    sequence = reduction(x)
+    max = sequence if sequence.size > max.size
 end
 puts "Max number #{max.first} size: #{max.count} - #{max}"
+
+# STOP TIMER
+puts "time: #{Time.now.to_f - start.to_f}"

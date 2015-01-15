@@ -6,15 +6,15 @@
 require "mathn"
 
 class Integer
-	def fsum
-		(1..self-1).select{|n| (self % n).zero?}.reduce(:+)
-	end
-	def amicable?
-		if !self.fsum.nil? && !self.fsum.fsum.nil? && self == self.fsum.fsum
-			puts "#{self} == #{self.fsum}"
-			return true
-		end
-	end
+    def fsum
+        (1..self-1).select{|n| (self % n).zero?}.reduce(:+)
+    end
+    def amicable?
+        if !self.fsum.nil? && !self.fsum.fsum.nil? && self == self.fsum.fsum
+            puts "#{self} == #{self.fsum}"
+            return true
+        end
+    end
 end
 
 puts (1..1E4).select{|n| n.amicable?}.reduce(:+)

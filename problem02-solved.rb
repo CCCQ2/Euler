@@ -3,17 +3,17 @@
 #By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
 fib = Enumerator.new do |yielder|
-	i = 0
-	j = 1
-	loop do
-		i, j = j, i + j
-		yielder.yield i
-	end
+    i = 0
+    j = 1
+    loop do
+        i, j = j, i + j
+        yielder.yield i
+    end
 end
 
 total = 0
 fib.take_while{ |n| n <= 4E6 }.find_all{|i| i % 2 == 0}.entries.each_with_index do |n, index|
-	puts index.to_s + " - " + n.to_s
-	total += n
+    puts index.to_s + " - " + n.to_s
+    total += n
 end
 puts total
